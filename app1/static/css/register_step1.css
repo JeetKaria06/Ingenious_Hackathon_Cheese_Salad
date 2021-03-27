@@ -1,0 +1,17 @@
+ul {
+  list-style: none;
+}
+
+.post-form {
+  padding-top: 10vh;
+}
+.form_inside {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 20vh;
+}
+button {
+  position: absolute;
+  right: 30%;
+  bottom: 10%;
+}

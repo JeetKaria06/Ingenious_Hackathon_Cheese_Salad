@@ -1,0 +1,41 @@
+{% extends 'navbar.html' %}
+{% load static %}
+
+{% block title %}
+Connect | Home
+{% endblock %}
+
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/home.css' %}">
+{% endblock %}
+
+
+{% block body_wrap %}
+<div class="home__contener">
+    <div class="row">
+        <div class="col-sm home__text">
+            <div class="home__text__con" data-aos="fade-right">
+                Let's make new <p class="friends">Friends</p>
+                <div class="home__join">
+                    <button type="button" class="btn btn-lg">Sign up</button>
+                </div>
+            </div>
+
+        </div>
+        <div class="col-sm home__img">
+            <div class="home__img__con" data-aos="fade-left">
+                <img src="{% static 'media/friends.png' %}"><img>
+            </div>
+        </div>
+    </div>
+
+    <div class="design__1" data-aos="fade-top">
+        <img src="{% static 'media/d1.png' %}">
+    </div>
+    <div class="design__2">
+        <img src="{% static 'media/d2.png' %}">
+    </div>
+</div>
+
+{% endblock %}

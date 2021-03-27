@@ -1,0 +1,58 @@
+{% extends 'navbar.html' %}
+{% load static %}
+
+{% block title %}
+Connect | Registration
+{% endblock %}
+
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/register.css' %}">
+{% endblock %}
+
+
+
+
+{% block body_wrap %}
+<div class="register__contener">
+    <div class="row">
+        <div class="col-sm " data-aos="fade-right">
+            <div class="register__photo">
+                <img src="{% static '/media/register.png' %}" alt="">
+            </div>
+
+        </div>
+        <div class="col-sm " data-aos="fade-left">
+            <div class="register__form">
+                <div class="register__text">Register</div>
+                <div class="register__form__con">
+
+                    <form method="POST" class="post-form">
+                        {% csrf_token %}
+                        {% for f in form %}
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">{{ f.label }}</label>
+                            {{ f }}
+                        </div>
+                        <p></p>
+                        {% endfor %}
+                        <p>
+                            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
+                                else.</small>
+                        </p>
+                        <button type="submit" class="save btn btn btn-nrmal bg-dark">login</button>
+                    </form>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+    <div class="design__2">
+        <img src="{% static 'media/d2.png' %}">
+    </div>
+    <div class="design__5">
+        <img src="{% static 'media/d5.png' %}">
+    </div>
+</div>
+{% endblock %}

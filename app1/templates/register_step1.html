@@ -1,0 +1,34 @@
+{% extends 'navbar.html' %}
+{% load static %}
+
+{% block title %}
+Connect | Registration
+{% endblock %}
+
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/register_step1.css' %}">
+{% endblock %}
+
+
+
+
+{% block body_wrap %}
+<div class="register__contener">
+    <div class="row">
+        <form method="POST" class="post-form">
+            <div class="form_inside">
+                {% csrf_token %}
+                {% for f in form %}
+                <div class="form-group ">
+                    <label for="exampleInputEmail1">{{ f.label }}</label>
+                    {{ f }}
+                </div>
+                <p></p>
+                {% endfor %}
+            </div>
+            <button type="submit" class="save btn btn btn-nrmal bg-dark">login</button>
+        </form>
+    </div>
+</div>
+{% endblock %}

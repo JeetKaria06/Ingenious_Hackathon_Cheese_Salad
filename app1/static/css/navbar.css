@@ -1,0 +1,69 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body::-webkit-scrollbar {
+  width: 0px;
+}
+
+.container-fluid,
+.navbar-expand-lg {
+  padding: 0;
+}
+.container-fluid {
+  margin-top: 10px;
+}
+.nav-item > a {
+  color: gray;
+}
+.nav-item {
+  margin-right: 10px;
+}
+.navbar-brand {
+  padding: 0;
+  margin-left: 10px;
+}
+.navbar-brand > span > img {
+  max-width: 130px;
+}
+.active > a {
+  color: black !important;
+}
+
+.active {
+  border-bottom: solid 3px #f35456;
+}
+
+.login__register {
+  margin-right: 80px;
+}
+
+.login,
+.register {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.login__register__active {
+  background-color: black;
+}
+
+.login__register__active > a {
+  color: white !important;
+}
+
+.nav-item-left:hover {
+  color: black !important;
+  border-bottom: solid 3px #f35456;
+  transition: border 0.1s ease-in;
+}
+
+.login > a :hover {
+  letter-spacing: 1px;
+  transition: all 0.1s ease-in;
+}
+
+.register > a :hover {
+  letter-spacing: 1px;
+  transition: all 0.1s ease-in;
+}

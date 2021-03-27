@@ -1,0 +1,52 @@
+{% extends 'navbar.html' %}
+{% load static %}
+
+{% block title %}
+Connect | Login
+{% endblock %}
+
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/login.css' %}">
+{% endblock %}
+
+
+
+
+{% block body_wrap %}
+<div class="login__contener">
+    <div class="row">
+        <div class="col-sm login__photo" data-aos="fade-right">
+            <img src="{% static '/media/login.jpg' %}" alt="">
+        </div>
+        <div class="col-sm home__form" data-aos="fade-left">
+            <div class="login__text">Login</div>
+            <div class="login__form">
+
+                <form method="POST" class="post-form">
+                    {% csrf_token %}
+                    {% for f in form %}
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">{{ f.label }}</label>
+                        {{ f }}
+                    </div>
+                    <p></p>
+                    {% endfor %}
+                    <p>
+                        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
+                            else.</small>
+                    </p>
+                    <button type="submit" class="save btn btn btn-nrmal bg-dark">login</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="d3">
+        <img src="{% static '/media/d3.png' %}" alt="" srcset="">
+    </div>
+    <div class="d4">
+        <img src="{% static '/media/d4.png' %}" alt="" srcset="">
+    </div>
+</div>
+
+{% endblock %}
