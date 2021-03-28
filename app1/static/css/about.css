@@ -1,0 +1,20 @@
+@import url("https://fonts.googleapis.com/css2?family=Train+One&display=swap");
+
+::-webkit-scrollbar {
+  width: 0; /* Remove scrollbar space */
+  background: transparent; /* Optional: just make scrollbar invisible */
+}
+
+.about_us {
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.about_us_con {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.aboutus__text {
+}

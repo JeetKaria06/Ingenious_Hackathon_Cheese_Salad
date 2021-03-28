@@ -1,17 +1,57 @@
-ul {
-  list-style: none;
+@import url("https://fonts.googleapis.com/css2?family=Train+One&display=swap");
+
+::-webkit-scrollbar {
+  width: 0; /* Remove scrollbar space */
+  background: transparent; /* Optional: just make scrollbar invisible */
+}
+.register__contener {
+  padding-top: 10vh;
+  padding-left: 2vw;
+  padding-right: 2vw;
+  padding-bottom: 20px;
+}
+.book__data,
+.movie__data {
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  overflow-x: scroll;
+  margin-bottom: 20px;
+}
+.card {
+  background-color: white !important;
+  padding: 10px;
+  min-height: 200px;
+  min-width: 500px;
+  margin-right: 20px;
+  border-radius: 10px;
 }
 
-.post-form {
-  padding-top: 10vh;
+.card > img {
+  max-height: 200px;
+  transition: all 1s ease;
 }
-.form_inside {
-  display: flex;
-  justify-content: space-between;
-  padding-left: 20vh;
+
+.movie__title,
+.book__title {
+  font-family: "Train One", cursive;
+  font-size: 30px;
 }
-button {
-  position: absolute;
-  right: 30%;
-  bottom: 10%;
+
+.design_6 {
+  position: fixed;
+  z-index: -1;
+  top: 30%;
+  right: 50%;
+}
+.design_6 > img {
+  transform: rotate(30deg);
+  max-width: 300px;
+  opacity: 0.5;
+}
+.card-hover {
+  filter: blur(4px);
+}
+.card-selected {
+  background-color: black !important;
 }

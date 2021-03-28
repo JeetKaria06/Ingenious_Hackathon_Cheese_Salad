@@ -6,8 +6,8 @@ from .form_app1 import loginForm,registerForm,registerForm_1
 
 
 def Home(request):
+    request.session['is_logedin']=True
     return render(request,'index.html')
-
 
 
 def Login(request):    
@@ -23,3 +23,15 @@ def Register(request):
 def Register_step1(request,userid):
     register=registerForm_1()
     return render(request,'register_step1.html',{'form':register})
+
+
+def Dashboard(request):
+    return render(request,'dashboard.html')
+
+
+def UserProfile(request,userid):
+    return render(request,'profile.html')
+
+
+def AboutUs(request):
+    return render(request,'about.html')

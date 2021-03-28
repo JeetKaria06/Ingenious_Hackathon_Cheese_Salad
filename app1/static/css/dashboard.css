@@ -1,0 +1,107 @@
+@import url("https://fonts.googleapis.com/css2?family=Train+One&display=swap");
+
+::-webkit-scrollbar {
+  width: 0; /* Remove scrollbar space */
+  background: transparent; /* Optional: just make scrollbar invisible */
+}
+.row {
+  max-width: 100vw;
+}
+.dashboard_photo {
+  padding-top: 4vh;
+}
+.info_con {
+  padding-top: 5vh;
+}
+.username {
+  padding-bottom: 0px;
+  font-size: 22px;
+  color: #f35456;
+}
+.username > span {
+  font-family: "Train One", cursive;
+  font-size: 30px;
+  color: black;
+}
+.info_con_cards {
+  padding: 10px;
+  display: flex;
+  padding-bottom: 15px;
+}
+.card {
+  position: relative;
+  margin-right: 10px;
+  width: 100% !important;
+}
+.connect__button {
+  position: absolute;
+  bottom: 5%;
+  right: 1%;
+  background-color: #f35456;
+  border-radius: 20px;
+  margin: 0;
+  padding: 0;
+}
+.connect__button > button {
+  color: white;
+  font-size: 10px;
+}
+.card:hover {
+  border: 2px solid gray;
+}
+
+.col-sm-right {
+  overflow-y: scroll;
+}
+
+.friend__recom__text {
+  font-size: 20px;
+}
+.friend__recom__tex > span {
+  font-family: "Train One", cursive !important;
+}
+
+.friend_recom {
+  padding: 10px;
+  overflow-y: scroll;
+  max-height: 45vh;
+}
+.friend_recom > .card {
+  margin-bottom: 10px;
+  transition: all 0.2s ease;
+}
+.friend_recom > connect__button .card:hover {
+  border: solid 2px gray;
+}
+
+.design__2,
+.design__7 {
+  position: absolute;
+  z-index: -1;
+}
+@keyframes updown {
+  0% {
+    bottom: 5%;
+  }
+  100% {
+    bottom: 0%;
+  }
+}
+
+.design__2 {
+  left: 42%;
+  animation: updown 1.5s linear infinite;
+}
+
+.design__2 > img {
+  max-width: 40px;
+}
+.design__7 {
+  top: 10%;
+  left: 25%;
+  z-index: 2;
+}
+.design__7 > img {
+  max-width: 250px;
+  opacity: 0.5;
+}

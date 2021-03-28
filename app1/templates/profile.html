@@ -1,0 +1,109 @@
+{% extends 'navbar.html' %}
+{% load static %}
+
+{% block title %}
+Connect | Profile
+{% endblock %}
+
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/profile.css' %}">
+{% endblock %}
+
+
+{% block body_wrap %}
+<div class="row">
+    <div class="col-sm profile__left">
+        <div class="Profile__text">
+            Profile
+        </div>
+        <div class="profile__left__con" data-aos="fade-right">
+            <div class="profile__photo" data-aos="fade-up">
+                <img src="{% static 'media/useravatar.jpg' %}" alt="" srcset="">
+            </div>
+            <div class="personal__details">
+                <div class="info" data-aos="fade-right">
+                    <span>Name :</span> Rahul Chocha
+                </div>
+                <div class="info" data-aos="fade-right">
+                    <span>Email :</span> rahul.c@ahduni.edu.in
+                </div>
+                <div class="info">
+                    <span>Age :</span> 22
+                </div>
+                <div class="info">
+                    <span>Phone number :</span>+91-7096642232
+                </div>
+                <div class="info">
+                    <span>Country :</span>India
+                </div>
+                <div class="info">
+                    <span>Pin-code :</span>361005
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="col-sm">
+        <div class="friends_text">
+            Your Friends
+        </div>
+
+        <div class="friend_list col-sm-right">
+            <div class="card" data-aos="fade-left">
+                <div class="card-body">
+                    <h5 class="card-title">Total Friends</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                    <p class="card-text">56</p>
+                </div>
+                <div class="connect__button">
+                    <button class="btn">Connect</button>
+                </div>
+            </div>
+            <div class="card" data-aos="fade-left">
+                <div class="card-body">
+                    <h5 class="card-title">Total Friends</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                    <p class="card-text">56</p>
+                </div>
+                <div class="connect__button">
+                    <button class="btn">Connect</button>
+                </div>
+            </div>
+            <div class="card" data-aos="fade-left">
+                <div class="card-body">
+                    <h5 class="card-title">Total Friends</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                    <p class="card-text">56</p>
+                </div>
+                <div class="connect__button">
+                    <button class="btn">Connect</button>
+                </div>
+            </div>
+            <div class="card" data-aos="fade-left">
+                <div class="card-body">
+                    <h5 class="card-title">Total Friends</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                    <p class="card-text">56</p>
+                </div>
+                <div class="connect__button">
+                    <button class="btn">Connect</button>
+                </div>
+            </div>
+
+        </div>
+        <div class="design__2">
+            <img src="{% static 'media/d2.png' %}">
+        </div>
+        <div class="design__8">
+            <img src="{% static 'media/d8.png' %}">
+        </div>
+        <div class="design__9">
+            <img src="{% static 'media/d9.png' %}">
+        </div>
+    </div>
+
+</div>
+
+
+{% endblock %}

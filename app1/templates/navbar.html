@@ -31,13 +31,10 @@
                         <a class="nav-link " aria-current="page" href="{% url 'home' %}">Home</a>
                     </li>
                     <li class=" nav-item nav-item-left">
-                        <a class="nav-link" href="#">Dashboard</a>
+                        <a class="nav-link" href="{% url 'dashboard' %}">Dashboard</a>
                     </li>
                     <li class=" nav-item nav-item-left">
-                        <a class="nav-link" href="#">Explore</a>
-                    </li>
-                    <li class=" nav-item nav-item-left">
-                        <a class="nav-link" href="#">About us</a>
+                        <a class="nav-link" href="{% url 'aboutus' %}">About us</a>
                     </li>
                 </ul>
 
@@ -50,11 +47,24 @@
                         <a class="nav-link" href="{% url 'register' %}"">Register</a>
                     </li>
                     {% else %}
-                    <li class=" nav-item login login__register__active">
-                            <a class="nav-link" aria-current="page" href="{% url 'login' %}">notification</a>
+                    <li class=" nav-item">
+                            <a class="nav-link notofication" id="notofication" aria-current="page" href="#">
+                                <img src="{% static 'media/message.svg' %}" alt="">
+                            </a>
                     </li>
                     <li class="nav-item  register">
-                        <a class="nav-link" href="#">Mydetails</a>
+                        <!-- <a class="nav-link" href="#"></a> -->
+                        <div class="dropdown" style="vertical-align: middle;">
+                            <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton1"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                <img src="{% static 'media/user.svg' %}" alt="">
+                                Rahul Chocha
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                <li><a class="dropdown-item" href="{% url 'userProfile' userid='me' %}">Profile</a></li>
+                                <li><a class="dropdown-item" href="#">Logout</a></li>
+                            </ul>
+                        </div>
                     </li>
                     {% endif %}
                 </ul>
@@ -62,6 +72,55 @@
             </div>
         </div>
     </nav>
+    <div class="notification_bar">
+        <div class="noti_con">
+
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Last Active</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                    <p class="card-text">Today
+                    </p>
+                </div>
+                <div class="connect__button">
+                    <button class="btn">Connect</button>
+                </div>
+                <div class="declin__button">
+                    <button class="btn">Decline</button>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Last Active</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                    <p class="card-text">Today
+                    </p>
+                </div>
+                <div class="connect__button">
+                    <button class="btn">Connect</button>
+                </div>
+                <div class="declin__button">
+                    <button class="btn">Decline</button>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Last Active</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                    <p class="card-text">Today
+                    </p>
+                </div>
+                <div class="connect__button">
+                    <button class="btn">Connect</button>
+                </div>
+                <div class="declin__button">
+                    <button class="btn">Decline</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
 
     {% block body_wrap %}{% endblock %}
     <!-- JavaScript Bundle with Popper -->
@@ -73,19 +132,7 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init();
-        if ($(window).width() > 992) {
-            $(window).scroll(function () {
-                if ($(this).scrollTop() > 40) {
-                    $('#navbar').addClass("fixed-top");
-                    // add padding top to show content behind navbar
-                    $('body').css('padding-top', $('.navbar').outerHeight() + 'px');
-                } else {
-                    $('#navbar').removeClass("fixed-top");
-                    // remove padding top from body
-                    $('body').css('padding-top', '0');
-                }
-            });
-        }
+
         $('.nav-item-left').hover(function () {
 
             //alert('in')
@@ -95,6 +142,26 @@
             $(this).addClass('active');
             $(this > a).css('color:black');
             $(this).css('  border-bottom: solid 3px #f35456;')
+        })
+
+        $('.notofication').click(function () {
+            if ($('.notification_bar').hasClass('notification_active')) {
+                $('.notification_bar').removeClass('notification_active')
+            }
+            else {
+                $('.notification_bar').addClass('notification_active')
+            }
+        })
+        $('body').click(function (evt) {
+
+            if (evt.target.id == "notofication")
+                return;
+
+            if ($(evt.target).closest('.notofication').length)
+                return;
+            if ($(evt.target).closest('.notification_active').length)
+                return;
+            $('.notification_bar').removeClass('notification_active')
         })
     </script>
     {% block extra_js %} {% endblock %}

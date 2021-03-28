@@ -1,0 +1,44 @@
+{% extends 'navbar.html' %}
+{% load static %}
+
+{% block title %}
+Connect | About us
+{% endblock %}
+
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/about.css' %}">
+{% endblock %}
+
+
+{% block body_wrap %}
+<div class="about_us">
+    <div class="aboutus__text">
+        Mee the Team
+    </div>
+
+    <div class="about_us_con">
+        <div class="card" data-aos="fade-left">
+            <div class="card-body">
+                <h5 class="card-title">Rahul Chocha</h5>
+                <h6 class="card-subtitle mb-2 text-muted">B.tech ICT student at Ahmedabad University</h6>
+                <p class="card-text">56</p>
+            </div>
+        </div>
+        <div class="card" data-aos="fade-left">
+            <div class="card-body">
+                <h5 class="card-title">Mayank Tank</h5>
+                <h6 class="card-subtitle mb-2 text-muted">B.tech ICT student at Ahmedabad University</h6>
+                <p class="card-text">56</p>
+            </div>
+        </div>
+        <div class="card" data-aos="fade-left">
+            <div class="card-body">
+                <h5 class="card-title">Jeet Karia</h5>
+                <h6 class="card-subtitle mb-2 text-muted">B.tech ICT student at Ahmedabad University</h6>
+                <p class="card-text">56</p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

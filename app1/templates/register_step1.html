@@ -15,20 +15,100 @@ Connect | Registration
 
 {% block body_wrap %}
 <div class="register__contener">
-    <div class="row">
-        <form method="POST" class="post-form">
-            <div class="form_inside">
-                {% csrf_token %}
-                {% for f in form %}
-                <div class="form-group ">
-                    <label for="exampleInputEmail1">{{ f.label }}</label>
-                    {{ f }}
-                </div>
-                <p></p>
-                {% endfor %}
+    <div class="book__title">Book types</div>
+    <div class="book__data ">
+        <div class="card bg-dark  book__card text-white" id="action" data-aos="fade-right">
+            <img class="card-img" src="{% static 'media/ninja.jpg' %}" alt="Card image">
+            <div class="card-img-overlay">
+                <h5 class="card-title">Action</h5>
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
+                    content. This content is a little bit longer.</p>
             </div>
-            <button type="submit" class="save btn btn btn-nrmal bg-dark">login</button>
-        </form>
+        </div>
+        <div class="card bg-dark book__card text-white" id="romance">
+            <img class="card-img" src="{% static 'media/nature.jpg' %}" alt="Card image">
+            <div class="card-img-overlay">
+                <h5 class="card-title">Romance</h5>
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
+                    content. This content is a little bit longer.</p>
+            </div>
+        </div>
+        <div class="card bg-dark book__card text-white">
+            <img class="card-img" src="{% static 'media/vilage.jpg' %}" alt="Card image">
+            <div class="card-img-overlay">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
+                    content. This content is a little bit longer.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="movie__title">Movie types</div>
+    <div class="movie__data">
+        <div class="card movie__card bg-dark text-white">
+            <img class="card-img" src="{% static 'media/ninja.jpg' %}" alt="Card image">
+            <div class="card-img-overlay">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+                    additional
+                    content. This content is a little bit longer.</p>
+            </div>
+        </div>
+        <div class="card bg-dark text-white">
+            <img class="card-img" src="{% static 'media/nature.jpg' %}" alt="Card image">
+            <div class="card-img-overlay">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+                    additional
+                    content. This content is a little bit longer.</p>
+            </div>
+        </div>
+        <div class="card bg-dark text-white">
+            <img class="card-img" src="{% static 'media/vilage.jpg' %}" alt="Card image">
+            <div class="card-img-overlay">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+                    additional
+                    content. This content is a little bit longer.</p>
+            </div>
+        </div>
+    </div>
+    <div><button class="btn btn-dark">Submit</button></div>
+    <div class="design_6">
+        <img src="{% static 'media/d6.png' %}" alt="">
     </div>
 </div>
+{% endblock %}
+
+
+{% block extra_js %}
+<script>
+    var arr_book = [];
+    var arr_movie = [];
+
+    $(".card").hover(function () {
+        $(this).find('img').addClass('card-hover')
+    }, function () {
+        $(this).find('img').removeClass('card-hover')
+    });
+    $('.book__card').click(function () {
+        arr_book.push($(this).attr('id'));
+        console.log($(this).attr('id'));
+        if ($(this).hasClass('card-selected')) {
+            $(this).removeClass('card-selected')
+        } else {
+            $(this).addClass('card-selected');
+        }
+    })
+    $('.movie__card').click(function () {
+        arr_movie.push($(this).attr('id'))
+
+        console.log($(this).attr('id'));
+        if ($(this).hasClass('card-selected')) {
+            $(this).removeClass('card-selected')
+        } else {
+            $(this).addClass('card-selected');
+        }
+    })
+</script>
 {% endblock %}

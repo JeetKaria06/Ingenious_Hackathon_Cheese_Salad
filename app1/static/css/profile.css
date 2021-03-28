@@ -1,0 +1,116 @@
+@import url("https://fonts.googleapis.com/css2?family=Train+One&display=swap");
+
+::-webkit-scrollbar {
+  width: 0; /* Remove scrollbar space */
+  background: transparent; /* Optional: just make scrollbar invisible */
+}
+.row {
+  max-width: 100vw;
+}
+.profile__left {
+  padding-left: 5%;
+  padding-right: 10%;
+}
+.profile__left__con {
+  padding: 10px;
+  position: relative;
+  border: 1px solid gray;
+  border-radius: 20px;
+  min-height: 75vh;
+  background-color: white;
+}
+.profile__photo {
+  position: relative;
+  left: 32%;
+}
+.personal__details {
+  position: relative;
+  left: 27%;
+  line-height: 30px;
+  color: gray;
+}
+.personal__details > .info > span {
+  font-weight: bold;
+  color: black;
+}
+.Profile__text,
+.friends_text {
+  font-family: "Train One", cursive;
+  font-size: 30px;
+  padding-left: 5%;
+}
+
+.col-sm-right {
+  max-height: 80vh;
+  overflow-y: scroll;
+}
+
+.friend_list {
+  overflow-y: scroll;
+  padding: 20px;
+}
+.card {
+  margin-bottom: 10px;
+}
+.card:hover {
+  border: 2px solid gray;
+}
+.connect__button {
+  position: absolute;
+  bottom: 5%;
+  right: 1%;
+  background-color: #f35456;
+  border-radius: 20px;
+  margin: 0;
+  padding: 0;
+}
+.connect__button > button {
+  color: white;
+  font-size: 10px;
+}
+.design__2,
+.design__8,
+.design__9 {
+  position: absolute;
+}
+@keyframes updown {
+  0% {
+    bottom: 5%;
+  }
+  100% {
+    bottom: 0%;
+  }
+}
+
+.design__2 {
+  right: 50%;
+  animation: updown 1.5s linear infinite;
+}
+
+.design__2 > img {
+  max-width: 40px;
+}
+
+.design__8 {
+  top: 10%;
+  left: 39%;
+  z-index: -1;
+  background-color: white;
+  padding: 10px;
+}
+
+.design__8 > img {
+  max-width: 200px;
+  transform: rotate(10deg);
+}
+
+.design__9 {
+  bottom: -5%;
+  left: -2%;
+  z-index: 2;
+  padding: 10px;
+  opacity: 0.8;
+}
+.design__9 > img {
+  max-width: 200px;
+}

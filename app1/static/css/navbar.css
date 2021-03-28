@@ -67,3 +67,57 @@ body::-webkit-scrollbar {
   letter-spacing: 1px;
   transition: all 0.1s ease-in;
 }
+
+.notification_bar {
+  z-index: 5;
+  position: absolute;
+  top: 7%;
+  right: 23.5%;
+  min-width: 30vw;
+  max-height: 40vh;
+  overflow-y: scroll;
+  padding: 15px;
+  background-color: white;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  border: 1px solid gray;
+  display: none;
+}
+.card {
+  width: 30vw;
+  margin-bottom: 10px;
+}
+.card-body {
+  margin-bottom: 30px;
+}
+.declin__button {
+  position: absolute;
+  bottom: 5%;
+  right: 2%;
+  background-color: black;
+  border-radius: 20px;
+  margin: 0;
+  padding: 0;
+}
+.connect__button {
+  position: absolute;
+  bottom: 5%;
+  right: 18%;
+  background-color: #f35456;
+  border-radius: 20px;
+  margin: 0;
+  padding: 0;
+}
+.connect__button > button,
+.declin__button > button {
+  color: white;
+  font-size: 10px;
+}
+.card:hover {
+  border: 2px solid gray;
+}
+
+.notification_active {
+  display: block !important;
+}

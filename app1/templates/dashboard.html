@@ -1,0 +1,111 @@
+{% extends 'navbar.html' %}
+{% load static %}
+
+{% block title %}
+Connect | Home
+{% endblock %}
+
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/dashboard.css' %}">
+{% endblock %}
+
+
+{% block body_wrap %}
+<div class="dashboard_coin">
+    <div class="row">
+        <div class="col-sm">
+            <div class="dashboard_photo" data-aos="fade-right">
+                <img src="{% static 'media/dashboard.jpg' %}" alt="" srcset="">
+            </div>
+        </div>
+        <div class="col-sm col-sm-right">
+
+            <div class="info_con">
+                <div class="username"> <span>Hi,</span> Rahul Chocha
+                </div>
+                <div class="info_con_cards">
+                    <div class="card" data-aos="fade-left">
+                        <div class="card-body">
+                            <h5 class="card-title">Total Friends</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                            <p class="card-text">56</p>
+                        </div>
+                    </div>
+                    <div class="card" data-aos="fade-left">
+                        <div class="card-body">
+                            <h5 class="card-title">Last Active</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                            <p class="card-text">Today morning.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="friend__recom__text">
+                <span>R</span>ecommended
+            </div>
+            <div class="friend_recom" data-aos="fade-right">
+                <div class="card" style="width: 18rem;">
+                    <div class="card-body">
+                        <h5 class="card-title">Last Active</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                        <p class="card-text">Today morning.</p>
+                    </div>
+                    <div class="connect__button">
+                        <button class="btn">Connect</button>
+                    </div>
+                </div>
+                <div class="card" style="width: 18rem;">
+                    <div class="card-body">
+                        <h5 class="card-title">Last Active</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                        <p class="card-text">Today morning.</p>
+                    </div>
+                    <div class="connect__button">
+                        <button class="btn">Connect</button>
+                    </div>
+                </div>
+                <div class="card" style="width: 18rem;">
+                    <div class="card-body">
+                        <h5 class="card-title">Last Active</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                        <p class="card-text">Today morning.</p>
+                    </div>
+                    <div class="connect__button">
+                        <button class="btn">Connect</button>
+                    </div>
+                </div>
+                <div class="card" style="width: 18rem;">
+                    <div class="card-body">
+                        <h5 class="card-title">Last Active</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                        <p class="card-text">Today morning.</p>
+                    </div>
+                    <div class="connect__button">
+                        <button class="btn">Connect</button>
+                    </div>
+                </div>
+                <div class="card" style="width: 18rem;">
+                    <div class="card-body">
+                        <h5 class="card-title">Last Active</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                        <p class="card-text">Today morning.</p>
+                    </div>
+                    <div class="connect__button">
+                        <button class="btn">Connect</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="design__2">
+        <img src="{% static 'media/d2.png' %}">
+    </div>
+    <div class="design__7">
+        <img src="{% static 'media/d7.png' %}">
+    </div>
+
+</div>
+{% endblock %}

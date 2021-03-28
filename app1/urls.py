@@ -21,5 +21,8 @@ urlpatterns = [
     path('login/',views.Login,name='login'),
     path('register/',views.Register,name='register'),
     path('register/step1/<slug:userid>',views.Register_step1,name='register_step1'),
-    
+    path('dashboard/',views.Dashboard,name='dashboard'),
+    path('userprofile/<slug:userid>',views.UserProfile,name='userProfile'),
+    path('aboutus/',views.AboutUs,name='aboutus'),
+
 ]
