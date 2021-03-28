@@ -39,7 +39,7 @@
                 </ul>
 
                 <ul class="navbar-nav mr-auro login__register">
-                    {% if 'is_logedin' not in request.session %}
+                    {% if 'is_logged_in' not in request.session %}
                     <li class="nav-item login login__register__active">
                         <a class="nav-link" aria-current="page" href="{% url 'login' %}">Login</a>
                     </li>
@@ -58,11 +58,11 @@
                             <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton1"
                                 data-bs-toggle="dropdown" aria-expanded="false">
                                 <img src="{% static 'media/user.svg' %}" alt="">
-                                Rahul Chocha
+                                {{ request.session.username }}
                             </button>
                             <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                                <li><a class="dropdown-item" href="{% url 'userProfile' userid='me' %}">Profile</a></li>
-                                <li><a class="dropdown-item" href="#">Logout</a></li>
+                                <li><a class="dropdown-item" href="{% url 'userProfile' userid=request.session.username %}">Profile</a></li>
+                                <li><a class="dropdown-item" href="{% url 'Logout' %}">Logout</a></li>
                             </ul>
                         </div>
                     </li>
@@ -82,10 +82,10 @@
                     <p class="card-text">Today
                     </p>
                 </div>
-                <div class="connect__button">
+                <div class="connect__button_nav">
                     <button class="btn">Connect</button>
                 </div>
-                <div class="declin__button">
+                <div class="declin__button_nav">
                     <button class="btn">Decline</button>
                 </div>
             </div>
@@ -96,10 +96,10 @@
                     <p class="card-text">Today
                     </p>
                 </div>
-                <div class="connect__button">
+                <div class="connect__button_nav">
                     <button class="btn">Connect</button>
                 </div>
-                <div class="declin__button">
+                <div class="declin__button_nav">
                     <button class="btn">Decline</button>
                 </div>
             </div>
@@ -110,10 +110,10 @@
                     <p class="card-text">Today
                     </p>
                 </div>
-                <div class="connect__button">
+                <div class="connect__button_nav">
                     <button class="btn">Connect</button>
                 </div>
-                <div class="declin__button">
+                <div class="declin__button_nav">
                     <button class="btn">Decline</button>
                 </div>
             </div>

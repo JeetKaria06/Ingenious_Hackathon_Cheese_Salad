@@ -22,7 +22,7 @@ Connect | Home
         <div class="col-sm col-sm-right">
 
             <div class="info_con">
-                <div class="username"> <span>Hi,</span> Rahul Chocha
+                <div class="username"> <span>Hi,</span> {{ sender_username }}
                 </div>
                 <div class="info_con_cards">
                     <div class="card" data-aos="fade-left">
@@ -46,56 +46,20 @@ Connect | Home
                 <span>R</span>ecommended
             </div>
             <div class="friend_recom" data-aos="fade-right">
-                <div class="card" style="width: 18rem;">
-                    <div class="card-body">
-                        <h5 class="card-title">Last Active</h5>
-                        <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-                        <p class="card-text">Today morning.</p>
+                {% for i in data %}
+                    <div class="card" style="width: 18rem;">
+                        <a href="{% url 'userProfile' userid=i.username %}" style="text-decoration:none">
+                            <div class="card-body">
+                                <h5 class="card-title">{{ i.username }}</h5>
+                                <h6 class="card-subtitle mb-2 text-muted">Match Percentage: {{ i.match_p }} %</h6>
+                                <p class="card-text">Age: {{ i.age }} </p>
+                            </div>
+                        </a>
+                        <div class="connect__button">
+                            <button class="btn"> Connect </button>
+                        </div>
                     </div>
-                    <div class="connect__button">
-                        <button class="btn">Connect</button>
-                    </div>
-                </div>
-                <div class="card" style="width: 18rem;">
-                    <div class="card-body">
-                        <h5 class="card-title">Last Active</h5>
-                        <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-                        <p class="card-text">Today morning.</p>
-                    </div>
-                    <div class="connect__button">
-                        <button class="btn">Connect</button>
-                    </div>
-                </div>
-                <div class="card" style="width: 18rem;">
-                    <div class="card-body">
-                        <h5 class="card-title">Last Active</h5>
-                        <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-                        <p class="card-text">Today morning.</p>
-                    </div>
-                    <div class="connect__button">
-                        <button class="btn">Connect</button>
-                    </div>
-                </div>
-                <div class="card" style="width: 18rem;">
-                    <div class="card-body">
-                        <h5 class="card-title">Last Active</h5>
-                        <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-                        <p class="card-text">Today morning.</p>
-                    </div>
-                    <div class="connect__button">
-                        <button class="btn">Connect</button>
-                    </div>
-                </div>
-                <div class="card" style="width: 18rem;">
-                    <div class="card-body">
-                        <h5 class="card-title">Last Active</h5>
-                        <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-                        <p class="card-text">Today morning.</p>
-                    </div>
-                    <div class="connect__button">
-                        <button class="btn">Connect</button>
-                    </div>
-                </div>
+                {% endfor %}
 
             </div>
         </div>

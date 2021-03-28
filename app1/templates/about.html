@@ -14,31 +14,55 @@ Connect | About us
 {% block body_wrap %}
 <div class="about_us">
     <div class="aboutus__text">
-        Mee the Team
+        Meet the Team
     </div>
-
     <div class="about_us_con">
+        <a href="https://github.com/mrchocha/" style="text-decoration: none;">
         <div class="card" data-aos="fade-left">
             <div class="card-body">
                 <h5 class="card-title">Rahul Chocha</h5>
                 <h6 class="card-subtitle mb-2 text-muted">B.tech ICT student at Ahmedabad University</h6>
-                <p class="card-text">56</p>
+                <p class="card-text">
+                <div class="card__img">
+                    <img src="{% static 'media/rahul.jpg' %}" alt="" srcset="">
+                </div>
+                </p>
             </div>
         </div>
+        </a>
+        <a href="https://github.com/MayankkumarTank" style="text-decoration: none;">
         <div class="card" data-aos="fade-left">
             <div class="card-body">
-                <h5 class="card-title">Mayank Tank</h5>
+                <h5 class="card-title">Mayankkumar Tank</h5>
                 <h6 class="card-subtitle mb-2 text-muted">B.tech ICT student at Ahmedabad University</h6>
-                <p class="card-text">56</p>
+                <p class="card-text">
+                <div class="card__img">
+                    <img src="{% static 'media/mayank.jpeg' %}" alt="" srcset="">
+                </div>
+                </p>
             </div>
         </div>
+        </a>
+        <a href="https://github.com/JeetKaria06" style="text-decoration: none;">
         <div class="card" data-aos="fade-left">
             <div class="card-body">
                 <h5 class="card-title">Jeet Karia</h5>
                 <h6 class="card-subtitle mb-2 text-muted">B.tech ICT student at Ahmedabad University</h6>
-                <p class="card-text">56</p>
+                <p class="card-text">
+                <div class="card__img">
+                    <img src="{% static 'media/jeet.jpeg' %}" alt="" srcset="">
+                </div>
+
+                </p>
             </div>
         </div>
+        </a>
+    </div>
+    <div class="design_4">
+        <img src="{% static 'media/d4.png' %}" alt="" srcset="">
+    </div>
+    <div class="design_6">
+        <img src="{% static 'media/d1.png' %}" alt="" srcset="">
     </div>
 </div>
 {% endblock %}

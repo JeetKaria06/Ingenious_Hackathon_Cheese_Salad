@@ -17,4 +17,35 @@
   padding-right: 20px;
 }
 .aboutus__text {
+  font-family: "Train One", cursive;
+  font-size: 30px;
+  padding-left: 35vw;
+  padding-bottom: 50px;
+}
+
+.card__img {
+  padding-left: 8vw;
+}
+
+.card__img > img {
+  max-width: 25vh;
+  height: 25vh;
+  border-radius: 50%;
+}
+
+.design_4 {
+  position: absolute;
+  top: 17vh;
+  left: 40vw;
+}
+.design_6 {
+  position: absolute;
+  top: 50vh;
+  left: 40vw;
+  z-index: -1;
+}
+
+.design_6 > img {
+  max-width: 20vw;
+  transform: rotate(45deg);
 }

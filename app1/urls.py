@@ -24,5 +24,5 @@ urlpatterns = [
     path('dashboard/',views.Dashboard,name='dashboard'),
     path('userprofile/<slug:userid>',views.UserProfile,name='userProfile'),
     path('aboutus/',views.AboutUs,name='aboutus'),
-
+    path('logout/', views.Logout, name='Logout')
 ]

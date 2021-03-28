@@ -91,7 +91,7 @@ body::-webkit-scrollbar {
 .card-body {
   margin-bottom: 30px;
 }
-.declin__button {
+.declin__button_nav {
   position: absolute;
   bottom: 5%;
   right: 2%;
@@ -100,7 +100,7 @@ body::-webkit-scrollbar {
   margin: 0;
   padding: 0;
 }
-.connect__button {
+.connect__button_nav {
   position: absolute;
   bottom: 5%;
   right: 18%;
@@ -109,8 +109,8 @@ body::-webkit-scrollbar {
   margin: 0;
   padding: 0;
 }
-.connect__button > button,
-.declin__button > button {
+.connect__button_nav > button,
+.declin__button_nav > button {
   color: white;
   font-size: 10px;
 }
